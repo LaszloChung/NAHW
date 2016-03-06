@@ -21,7 +21,7 @@ if args.a:
     args.d = 5
 
 if args.c:
-    print content['location']['city'] , ", " , content['item']['condition']['temp'],content['units']['temperature']
+    print content['location']['city'] , ", " , content['item']['condition']['text'],", ",content['item']['condition']['temp'],content['units']['temperature']
 
 if args.d>=0:
     content = content['item']['forecast']
