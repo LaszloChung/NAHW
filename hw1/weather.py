@@ -7,9 +7,10 @@ import json
 parser = argparse.ArgumentParser()
 parser.add_argument("-l", default="hsinchu" ,type=str ,help="locations")
 parser.add_argument("-u", default="c" ,type=str , choices=['c','f'] ,help="unit")
-parser.add_argument("-a", action='store_true' , help="equal to -c -d 5")
-parser.add_argument("-c", action='store_true' , help="current condition")
-parser.add_argument("-d", type=int , choices=[1,2,3,4,5] , help="forecasr")
+group = parser.add_mutually_exclusive_group()
+group.add_argument("-a", action='store_true' , help="equal to -c -d 5")
+group.add_argument("-c", action='store_true' , help="current condition")
+group.add_argument("-d", type=int , choices=[1,2,3,4,5] , help="forecasr")
 parser.add_argument("-s", action='store_true' , help="sunset/sunrise")
 args = parser.parse_args()
 
