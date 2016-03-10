@@ -20,8 +20,8 @@ def html_unescape(s):
 
 #=== parser ===
 parser = argparse.ArgumentParser()
-parser.add_argument("-n", default=5 ,type=int , help="number of search result.Default is 5")
-parser.add_argument("-p", default=1 ,type=int , help="page that you parse")
+parser.add_argument("-n", default=5 ,type=int , help="number of search result.Default is 5", metavar="")
+parser.add_argument("-p", default=1 ,type=int , help="page that you parse" , metavar="")
 parser.add_argument("keyword")
 args = parser.parse_args()
 url = "https://www.youtube.com/results?page="+ str(args.p) +"&search_query="
